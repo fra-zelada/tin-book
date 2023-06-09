@@ -38,7 +38,7 @@ export const TopNavBar = () => {
                         href={"/"}
                     >
                         <LogoIcon className="mr-1 md:mr-3 stroke-textOnBackgroundColor" />{" "}
-                        My Next Book
+                        Tin-Book
                     </NextLink>
                     <div className="flex flex-row items-center justify-center">
                         <div
