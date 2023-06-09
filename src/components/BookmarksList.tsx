@@ -1,6 +1,6 @@
 "use client";
 
-import { BooksBase } from "@/interfaces/booksBase";
+import { BooksBase, Genre } from "@/interfaces/booksBase";
 
 import { useEffect, useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
@@ -18,12 +18,16 @@ export const BookmarksList = () => {
     useEffect(() => {
         setBookmarks((prev) => {
             const tempBooks = [...book.favBooks];
-
-            const filteredBooks = [
-                ...tempBooks.filter((book) =>
-                    ui.bookmarksSelectedFilters?.includes(book?.genre)
-                ),
-            ];
+            let filteredBooks: BooksBase[] = [];
+            if (ui.bookmarksSelectedFilters.length > 0) {
+                filteredBooks = [
+                    ...tempBooks.filter((book) =>
+                        ui.bookmarksSelectedFilters?.includes(book?.genre)
+                    ),
+                ];
+            } else {
+                filteredBooks = [...tempBooks];
+            }
 
             if (
                 JSON.stringify(prev.sort()) !==
