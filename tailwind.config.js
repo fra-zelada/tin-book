@@ -36,6 +36,7 @@ module.exports = {
             },
             animation: {
                 pulseEaseInOnce: "fadeInDown 0.5s ease 1",
+                pulseEaseNotification: "fadeInDown 1s ease 1",
             },
         },
     },
