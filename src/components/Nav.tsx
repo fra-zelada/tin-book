@@ -3,6 +3,8 @@
 import { BookmarksIcon, BooksIcon } from "./Icons";
 import { usePathname } from "next/navigation";
 import NextLink from "next/link";
+import { Provider } from "@/store/Provider";
+import { Notification } from "./Notification";
 
 export const Nav = () => {
     const path = usePathname();
@@ -45,6 +47,9 @@ export const Nav = () => {
                     </span>
                 </div>
                 <div className="relative h-20 w-20 md:h-36 md:w-36 xs:w-1/2 flex flex-col justify-end items-center ">
+                    <Provider>
+                        <Notification />
+                    </Provider>
                     <NextLink
                         className={`absolute inset-0 -top-16 m-auto md:relative p-3 md:p-8 h-16 w-16 rounded-full border border-borderColor shadow shadow-shadowColor hover:-translate-y-1 hover:shadow-2xl hover:shadow-shadowColor hover:bg-primaryVariant group transition-all md:h-32 md:w-32 flex items-center justify-center ${
                             path === "/bookmarks"

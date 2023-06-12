@@ -7,13 +7,18 @@ import { useAppDispatch, useAppSelector } from "@/store/hook";
 import { BookmarkItem } from "./BookmarkItem";
 import { FilterIcon } from "./Icons";
 import { BookmarksFilter } from "./BookmarksFilter";
-import { toggleShowFilters } from "@/slice";
+import { toggleShowFilters, resetFavNotifications } from "@/slice";
 export const BookmarksList = () => {
     const { book, ui } = useAppSelector((state) => state);
     const dispatch = useAppDispatch();
     const [bookmarks, setBookmarks] = useState<BooksBase[]>([]);
 
     const refListBooks = useRef<HTMLUListElement>(null);
+
+    useEffect(() => {
+        dispatch(resetFavNotifications(0));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     useEffect(() => {
         setBookmarks((prev) => {
