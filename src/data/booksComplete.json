@@ -785,20 +785,6 @@
         "link2": "https://play.google.com/store/books/details?id=oqo4AwAAQBAJ"
     },
     {
-        "title": "Moby Dick",
-        "img": "https://books.google.com/books/content?id=4MeIOwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        "isbn": [
-            { "type": "ISBN_10", "identifier": "958300121X" },
-            { "type": "ISBN_13", "identifier": "9789583001215" }
-        ],
-        "date": "2002",
-        "genre": "Literatura clásica",
-        "author": ["Herman Melville"],
-        "rating": 0,
-        "link": "https://books.google.cl/books?id=4MeIOwAACAAJ&dq=Moby+Dick&hl=&cd=1&source=gbs_api",
-        "link2": "https://books.google.com/books/about/Moby_Dick.html?hl=&id=4MeIOwAACAAJ"
-    },
-    {
         "title": "Ulises",
         "img": "https://books.google.com/books/content?id=3_ClPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
         "isbn": [
